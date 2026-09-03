@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legacy Group — Investment &amp; Advisory. Dubai.</title>
+<meta name="description" content="Legacy Group is a Dubai-based investment and advisory group: a network of investors and advisories behind service businesses, technology ventures, and property, with an in-house technology division for SaaS development and AI implementation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#12312B;
+  --green-deep:#0C231F;
+  --ivory:#F4EFE4;
+  --ivory-dim:#E7E0D0;
+  --brass:#B08D57;
+  --brass-soft:#C6A97A;
+  --ink:#1C1B17;
+  --max:1160px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Archivo',sans-serif;
+  background:var(--green);
+  color:var(--ivory);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--brass);color:var(--green-deep)}
+
+.serif{font-family:'EB Garamond',serif}
+.mono{font-family:'Space Grotesk',sans-serif}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- eyebrow / labels ---------- */
+.eyebrow{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--brass-soft);
+  display:flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--brass);display:inline-block}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(12,35,31,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(176,141,87,.25);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:18px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  font-family:'EB Garamond',serif;font-weight:600;font-size:20px;
+  letter-spacing:.04em;color:var(--ivory);text-decoration:none;
+}
+.brand span{color:var(--brass)}
+.nav-links{display:flex;gap:34px}
+.nav-links a{
+  font-family:'Space Grotesk',sans-serif;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ivory-dim);text-decoration:none;transition:color .25s;
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--brass-soft)}
+a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* ---------- hero ---------- */
+header{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+  padding:140px 0 80px;
+}
+header::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 60% at 70% 20%,rgba(176,141,87,.08),transparent 60%);
+}
+.hero-kicker{margin-bottom:34px}
+h1{
+  font-family:'EB Garamond',serif;font-weight:500;
+  font-size:clamp(52px,9vw,118px);
+  line-height:1.02;letter-spacing:-.01em;
+  max-width:14ch;
+}
+h1 em{font-style:italic;color:var(--brass-soft)}
+.hero-sub{
+  margin-top:38px;max-width:56ch;
+  font-size:18px;color:var(--ivory-dim);
+}
+.hero-meta{
+  margin-top:64px;display:flex;gap:56px;flex-wrap:wrap;
+  border-top:1px solid rgba(176,141,87,.3);padding-top:26px;
+}
+.hero-meta div{display:flex;flex-direction:column;gap:4px}
+.hero-meta .k{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft)}
+.hero-meta .v{font-family:'EB Garamond',serif;font-size:22px}
+
+/* ---------- section scaffolding ---------- */
+section{padding:110px 0}
+.sec-head{margin-bottom:58px;max-width:62ch}
+.sec-head h2{
+  font-family:'EB Garamond',serif;font-weight:500;
+  font-size:clamp(34px,4.6vw,54px);line-height:1.12;margin-top:22px;
+}
+.sec-head p{margin-top:20px;color:var(--ivory-dim);font-size:17px}
+
+/* ---------- light band ---------- */
+.band-light{background:var(--ivory);color:var(--ink)}
+.band-light .eyebrow{color:#8a6c3c}
+.band-light .eyebrow::before{background:#8a6c3c}
+.band-light .sec-head p{color:#4c493f}
+
+/* ---------- pillars ---------- */
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(28,27,23,.15);border:1px solid rgba(28,27,23,.15)}
+.pillar{background:var(--ivory);padding:44px 40px 48px;position:relative;transition:background .3s}
+.pillar:hover{background:#EFE8D8}
+.pillar .p-label{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8a6c3c;margin-bottom:20px}
+.pillar h3{font-family:'EB Garamond',serif;font-weight:600;font-size:28px;line-height:1.2;margin-bottom:14px}
+.pillar p{color:#4c493f;font-size:15.5px}
+.pillar ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:8px}
+.pillar li{
+  font-family:'Space Grotesk',sans-serif;font-size:13px;color:#33312a;
+  padding-left:18px;position:relative;
+}
+.pillar li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:1px;background:#8a6c3c}
+
+/* ---------- register ---------- */
+.register-note{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:17px;
+  color:var(--brass-soft);margin-bottom:40px;
+}
+.register{border-top:1px solid rgba(176,141,87,.35)}
+.row{
+  display:grid;
+  grid-template-columns:70px 1.4fr 1fr 130px;
+  gap:24px;align-items:baseline;
+  padding:26px 0;
+  border-bottom:1px solid rgba(176,141,87,.22);
+  transition:padding-left .25s;
+}
+.row:hover{padding-left:10px}
+.row .no{font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--brass-soft);letter-spacing:.1em}
+.row .name{
+  font-family:'EB Garamond',serif;font-size:24px;line-height:1.25;
+}
+.row .name .withheld{
+  color:var(--brass-soft);font-style:italic;font-size:16px;display:block;margin-top:2px;
+}
+.row .sector{font-size:14px;color:var(--ivory-dim)}
+.row .est{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.14em;color:var(--brass-soft);text-align:right}
+
+/* ---------- advisory ---------- */
+.adv-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:start}
+.adv-list{display:flex;flex-direction:column;border-top:1px solid rgba(28,27,23,.2)}
+.adv-item{padding:24px 0;border-bottom:1px solid rgba(28,27,23,.14)}
+.adv-item h4{font-family:'EB Garamond',serif;font-weight:600;font-size:21px;margin-bottom:6px}
+.adv-item p{font-size:14.5px;color:#4c493f}
+
+/* ---------- principles ---------- */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:20px}
+.principle .num{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:20px;color:var(--brass-soft);
+  display:block;margin-bottom:14px;
+}
+.principle h4{font-family:'EB Garamond',serif;font-weight:600;font-size:22px;margin-bottom:10px}
+.principle p{font-size:15px;color:var(--ivory-dim)}
+
+/* ---------- quote band ---------- */
+.quote{
+  padding:130px 0;background:var(--green-deep);
+  border-top:1px solid rgba(176,141,87,.25);
+  border-bottom:1px solid rgba(176,141,87,.25);
+}
+.quote blockquote{
+  font-family:'EB Garamond',serif;font-weight:400;
+  font-size:clamp(26px,3.6vw,42px);line-height:1.3;
+  max-width:26ch;
+}
+.quote blockquote em{font-style:italic;color:var(--brass-soft)}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.contact a.mail{
+  font-family:'EB Garamond',serif;font-size:clamp(24px,3.4vw,38px);
+  color:var(--ivory);text-decoration:none;border-bottom:1px solid var(--brass);
+  transition:color .25s;
+}
+.contact a.mail:hover{color:var(--brass-soft)}
+.contact .small{
+  font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--brass-soft);margin-bottom:16px;
+}
+
+footer{
+  padding:36px 0 44px;border-top:1px solid rgba(176,141,87,.22);
+  font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--ivory-dim);
+}
+.foot-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .nav-links{display:none}
+  .pillars{grid-template-columns:1fr}
+  .adv-grid{grid-template-columns:1fr;gap:44px}
+  .principles{grid-template-columns:1fr;gap:38px}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .row{grid-template-columns:44px 1fr 90px;gap:14px}
+  .row .sector{display:none}
+  section{padding:80px 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Legacy<span>&nbsp;Group</span></a>
+    <div class="nav-links">
+      <a href="#group">The Group</a>
+      <a href="#register">Holdings</a>
+      <a href="#advisory">Advisory</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="eyebrow hero-kicker reveal">Dubai · Investment &amp; Advisory Group</div>
+    <h1 class="reveal">Capital, counsel,<br>and <em>companies.</em></h1>
+    <p class="hero-sub reveal">Legacy Group is a Dubai-based investment and advisory group. We bring together a network of investors and advisories — commercial and legal — behind a portfolio of service businesses, technology ventures, and property. Through our technology division, we build our own software and help other businesses implement AI and optimise with technology.</p>
+    <div class="hero-meta reveal">
+      <div><span class="k">Investments</span><span class="v serif">Tech · Businesses · Property</span></div>
+      <div><span class="k">Technology</span><span class="v serif">SaaS · AI Implementation</span></div>
+      <div><span class="k">Advisory</span><span class="v serif">Business · Legal</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="band-light" id="group">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Group</div>
+      <h2>A group of investors, advisors, and builders.</h2>
+      <p>Legacy sits at the centre of a network: groups of investors who back businesses, advisories — including legal counsel — who protect and structure them, and a technology division that builds and modernises them. Some companies we hold in the portfolio. Others we invest in or advise. All of them get the full weight of the group behind them.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="p-label">Pillar 01</div>
+        <h3>Investments</h3>
+        <p>We invest alongside a network of private investors into technology ventures, established service businesses, and residential property across two markets.</p>
+        <ul>
+          <li>Technology &amp; SaaS ventures</li>
+          <li>Service &amp; consumer businesses</li>
+          <li>Residential property · UAE &amp; New Zealand</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="p-label">Pillar 02</div>
+        <h3>Technology &amp; AI</h3>
+        <p>A dedicated technology division: we develop our own SaaS products in-house, and we help other businesses implement AI, automate, and optimise how they run.</p>
+        <ul>
+          <li>In-house SaaS product development</li>
+          <li>AI implementation &amp; automation for businesses</li>
+          <li>Technology optimisation &amp; systems ownership</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="p-label">Pillar 03</div>
+        <h3>Advisory &amp; Counsel</h3>
+        <p>Practical consulting for founders and owners, backed by a network of advisories that spans commercial strategy and legal counsel.</p>
+        <ul>
+          <li>Business management &amp; operations</li>
+          <li>Marketing, growth &amp; business development</li>
+          <li>Legal advisory through the group network</li>
+        </ul>
+      </div>
+      <div class="pillar reveal">
+        <div class="p-label">Pillar 04</div>
+        <h3>Portfolio Companies</h3>
+        <p>Established service businesses in the group portfolio, serving residential communities, commercial clients, and global brands across the UAE.</p>
+        <ul>
+          <li>Automotive care &amp; detailing</li>
+          <li>Home maintenance &amp; handyman services</li>
+          <li>Community-embedded subscription services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="register">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Register</div>
+      <h2>The holdings, by the book.</h2>
+    </div>
+    <p class="register-note reveal">Names withheld by choice. Each company carries its own brand, its own team, and its own reputation — the group prefers to stay behind them, not in front.</p>
+    <div class="register reveal">
+      <div class="row">
+        <span class="no">I.</span>
+        <span class="name">Automotive Care Co.<span class="withheld">name withheld</span></span>
+        <span class="sector">Community car care · 100+ communities across the UAE</span>
+        <span class="est">EST 2013</span>
+      </div>
+      <div class="row">
+        <span class="no">II.</span>
+        <span class="name">Automotive Studio Co.<span class="withheld">name withheld</span></span>
+        <span class="sector">Detailing, protection &amp; cosmetics · workshop operations</span>
+        <span class="est">EST 2015</span>
+      </div>
+      <div class="row">
+        <span class="no">III.</span>
+        <span class="name">Home Services Co.<span class="withheld">name withheld</span></span>
+        <span class="sector">Maintenance &amp; handyman services · Dubai</span>
+        <span class="est">EST 2023</span>
+      </div>
+      <div class="row">
+        <span class="no">IV.</span>
+        <span class="name">Software Co.<span class="withheld">name withheld</span></span>
+        <span class="sector">Vertical SaaS · service industry platforms</span>
+        <span class="est">IN BUILD</span>
+      </div>
+      <div class="row">
+        <span class="no">V.</span>
+        <span class="name">Property Portfolio</span>
+        <span class="sector">Residential holdings · UAE &amp; New Zealand</span>
+        <span class="est">ONGOING</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-light" id="advisory">
+  <div class="wrap">
+    <div class="adv-grid">
+      <div class="reveal">
+        <div class="eyebrow">Advisory</div>
+        <h2 class="serif" style="font-weight:500;font-size:clamp(32px,4.2vw,48px);line-height:1.14;margin-top:22px;">One group. Every discipline a business needs.</h2>
+        <p style="margin-top:22px;color:#4c493f;max-width:52ch;">We take on a select number of engagements at a time. The work is practical: we look at how your business actually runs — the numbers, the team, the tooling, the pipeline — and streamline it. Where AI and technology can carry real weight, our own division implements it. Where legal structure is the answer, our advisory network handles it.</p>
+      </div>
+      <div class="adv-list reveal">
+        <div class="adv-item">
+          <h4>Operations &amp; business management</h4>
+          <p>Structure, process, pricing, and the discipline of running service businesses profitably.</p>
+        </div>
+        <div class="adv-item">
+          <h4>Technology &amp; AI implementation</h4>
+          <p>Applied AI inside real workflows: sales, support, back office, reporting. Built and deployed by our own technology division.</p>
+        </div>
+        <div class="adv-item">
+          <h4>Marketing &amp; growth</h4>
+          <p>Brand, positioning, and demand — grounded in a marketing background and tested on our portfolio first.</p>
+        </div>
+        <div class="adv-item">
+          <h4>Legal &amp; corporate counsel</h4>
+          <p>Structuring, agreements, and disputes handled through the group's network of legal advisories.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap">
+    <blockquote class="reveal">&ldquo;A group is judged by how its companies run when <em>no one is watching.</em>&rdquo;</blockquote>
+  </div>
+</div>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Approach</div>
+      <h2>How we work.</h2>
+    </div>
+    <div class="principles">
+      <div class="principle reveal">
+        <span class="num">i.</span>
+        <h4>Own the system</h4>
+        <p>We build and control our own tools, data, and infrastructure. No black boxes, no rented dependencies at the core of a business.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="num">ii.</span>
+        <h4>Invest with insight</h4>
+        <p>We invest and advise where the group can add real value — capital backed by operating knowledge, technology, and counsel.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="num">iii.</span>
+        <h4>Compound quietly</h4>
+        <p>Long agreements, long tenancies, long relationships. We prefer a decade of steady compounding to a season of noise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="padding-bottom:90px;">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="margin-bottom:26px;">Contact</div>
+        <h2 class="serif" style="font-weight:500;font-size:clamp(32px,4.2vw,50px);line-height:1.15;">Start a conversation.</h2>
+        <p style="margin-top:18px;color:var(--ivory-dim);max-width:44ch;">For advisory engagements, partnership enquiries, or matters concerning any group company.</p>
+      </div>
+      <div class="reveal">
+        <div class="small">Write to the group</div>
+        <a class="mail" href="mailto:richard@legacygroup.me">richard@legacygroup.me</a>
+        <p style="margin-top:22px;font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--ivory-dim);letter-spacing:.04em;">Dubai, United Arab Emirates</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span>© 2026 Legacy Group. All rights reserved.</span>
+    <span class="serif" style="font-style:italic;color:var(--brass-soft);">Capital. Counsel. Companies.</span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
